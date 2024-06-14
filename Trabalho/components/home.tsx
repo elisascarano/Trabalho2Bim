@@ -1,5 +1,7 @@
 import React from 'react';
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity, ImageBackground, Image } from 'react-native';
+import Images from '../assets/images/world.png'
+import Titulo from '../assets/images/Titulo.png'
 import Sobre from './sobre';
 
 export default function App() {
@@ -9,11 +11,14 @@ export default function App() {
        if (page === 'home') {
           return (
              <View style={styles.container}>
-                <Text style={styles.title}>Página Principal</Text>
-                <Text style={styles.title}>Exemplo 1</Text>
-                <TouchableOpacity style={styles.button} onPress={() => setPage('sobre')}>
-                 <Text style={styles.buttonText}>Clique aqui</Text>
-                </TouchableOpacity>
+                <ImageBackground source={Images} style={styles.image}>
+                    <Image source={Titulo}></Image>
+                    <Text style={styles.title}>Página Principal</Text>
+                    <Text style={styles.title}>Exemplo 1</Text>
+                    <TouchableOpacity style={styles.button} onPress={() => setPage('sobre')}>
+                    <Text style={styles.buttonText}>Clique aqui</Text>
+                    </TouchableOpacity>
+                </ImageBackground>
              </View>
 
            );
@@ -27,12 +32,12 @@ export default function App() {
 
 
 const styles = StyleSheet.create({
+    
     container: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#fff',
-    
     },
     title: {
         fontSize: 24,
@@ -49,5 +54,8 @@ const styles = StyleSheet.create({
         color: '#FFFFFF',
         fontSize: 16,
     },
-
+    image: {
+        width: 400,
+        height: 800,
+    }
 });
