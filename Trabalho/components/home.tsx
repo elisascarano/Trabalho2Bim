@@ -10,8 +10,7 @@ export default function App() {
        if (page === 'home') {
           return (
              <View style={styles.container}>
-                <ImageBackground source={Images} style={styles.image}>
-                    <View style={styles.box}>
+                <ImageBackground source={Images} style={styles.image}>                    <View style={styles.box}>
                         <Text style={styles.text}>Seja bem-vindo, aqui a sua localização está ao alcance de um toque. Vamos começar a explorar!</Text>
                         <TouchableOpacity style={styles.button} onPress={() => setPage('sobre')}>
                             <Text style={styles.buttonText}>Entrar</Text>
@@ -45,7 +44,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
         borderTopLeftRadius: 12,
         borderTopRightRadius: 12,
-        padding: 25
+        padding: 60
     },
     text: {
         color: "#564F4F",
@@ -60,7 +59,7 @@ const styles = StyleSheet.create({
     },
     button: {
         backgroundColor: 'black',
-        padding: 10,
+        padding: 5,
         borderRadius: 5,
         width: 170,
         height: 35,
@@ -72,11 +71,13 @@ const styles = StyleSheet.create({
     buttonText: {
         color: '#FFFFFF',
         fontSize: 16,
+        fontWeight: 'bold',
     },
     image: {
-        width: 350,
+        width: 400,
         height: 700,
         display: "flex",
         justifyContent: 'flex-end',
+    },
     }
-});
+);

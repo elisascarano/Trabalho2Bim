@@ -12,7 +12,7 @@ export default function App(){
             <View style={styles.container}>
                 <ImageBackground source={Map} style={styles.image}>
                     <TouchableOpacity style={styles.button} onPress={() => setPage('home')}>
-                        <Text style={styles.buttonText}>Back</Text>
+                        <Text style={styles.buttonTextb}>Sair</Text>
                     </TouchableOpacity>
 
                     <View style={styles.box}>
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#DFE0E2',
-        width: 430
+        width: 400
     },
     title: {
         fontSize: 24,
@@ -51,29 +51,35 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     button: {
-        backgroundColor: '#D4D4D4',
-        padding: 10,
-        borderRadius: 5,
-        width: 55,
-        height: 35
+        backgroundColor: '#333333',
+        padding: 4,
+        borderRadius: 10,
+        width: 40,
+        height: 25
     },
     buttonGetLocation: {
-        backgroundColor: '#000',
-        padding: 10,
-        borderRadius: 5,
-        width: 150,
+        backgroundColor: 'white',
+        padding: 7,
+        borderRadius: 30,
+        width: 160,
         height: 35
     },
     buttonText: {
-        color: '#FFFFFF',
+        color: '#000',
         fontSize: 16,
+        fontWeight: "bold",
+    },
+    buttonTextb: {
+        color: '#ffffff',
+        fontSize: 13,
+        fontWeight: "bold",
     },
     image: {
-        width: 370,
-        height: 700,
+        width: 350,
+        height: 650,
         display: "flex",
         justifyContent: 'space-between',
-        borderRadius: 12,
+        borderRadius: 30,
         padding: 12
     },
     box: {
